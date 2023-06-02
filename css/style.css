@@ -1,0 +1,289 @@
+@font-face {
+    font-family: "Sentient";
+    src: url("Sentient-Variable.ttf");
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+*{
+    
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    /* font-weight: normal; */
+}
+
+
+/*Cosas generales*/
+h1{
+    font-family: 'Sentient';
+    width: 48%;
+    font-size: 16rem;
+    font-weight: 400;
+    color: white;
+}
+b{
+    font-weight: 500;
+}
+
+
+/**/
+header{
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: 10vh;
+    cursor: pointer;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    background-color:#FFEBD1;
+    position: absolute;
+}
+
+
+
+/*-------------ROAD------------*/
+
+#road{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 400vh;
+    background-color: #4DD19F;
+    transition: 1s;
+}
+#nombres{
+    right: 12%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+#nombres h4{
+    font-family: 'Sentient';
+    color:white;
+    font-size: 1.3rem;
+    font-weight: 100;
+}
+.divLinea{
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    align-self: center;
+    width: 95%;
+    height: 100%;
+    margin-top: -3vh;
+}
+#state{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 64vw;
+    margin-left: 15vw;
+    margin-top: 27vh;
+}
+h3{
+    font-family: "Sentient";
+    color: white;
+    font-size: 8rem;
+}
+#infoState{
+    font-size: 1.4rem;
+    margin-top: -5%;
+    margin-left: 3%;
+}
+#text{
+    font-size: 2rem;
+    width: 70%;
+    margin-left: 4%;
+}
+#caracteristicas{
+    margin-bottom: 4%;
+    margin-left: 4%;
+}
+#button{
+    cursor: pointer;
+    transition: 1s;
+    background: #ffffff00;
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    padding: 5px 20px;
+    text-decoration: none;
+    border: solid white;
+    margin-left: 4%;
+}
+#button:hover{
+    transition: 1s;
+    background: white;
+    color: black;
+}
+
+.linea{
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+
+
+
+/*-------------PUBLICACIÓN------------*/
+#post{
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    /* el height lo toco en la funcion irEstado */
+    height: 1300vh;
+    opacity: 1;
+}
+
+.heroImage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.estado{
+    margin-bottom: -5%;
+    font-family: 'Sentient';
+    font-size: 10rem;
+    font-weight: 300;
+    margin-left: -16px;
+    color: black;
+}
+.subtitulo{
+    font-weight: 200;
+    font-size: 5rem;
+}
+#silueta{
+    position: absolute;
+    width: 33%;
+    z-index: -1;
+    padding-left: 35%;
+}
+
+#detalles{
+   width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition:1s;
+}
+.dTitulo{
+    width: 48%;
+    font-size: 16rem;
+    font-weight: 300;
+    color: white;
+}
+.dTexto{
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.population{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+.datos{
+    margin-left: 5%;
+    font-weight: 500;
+}
+.population img{
+    opacity: 1;
+    z-index: -1;
+    position: absolute;
+    width: 20%;
+    margin-left: 38%;
+    margin-top: 4%;
+}
+
+.foto{
+    margin-left: 10vw;
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 12%;
+}
+.foto img{
+    width: 100%;
+}
+.foto h1{
+    margin-top: -895px;
+    color: white;
+}
+
+
+
+.destacado{
+    margin-left: 7%;
+    font-size: 3rem;
+    width: 45%;
+    padding: 1% 0;
+}
+.textos{
+    margin-left: 7%;
+    font-size: 1.6rem;
+    width: 45%;
+    padding: 1% 0;
+}
+.imgs{
+    width: 45%;
+    margin-left: 7%;
+}
+
+#animado{
+    position: sticky;
+    top: 20%;
+    text-align: right;
+    padding: 10%;
+}
+
+.publi{
+    padding: 200px 0;
+}
+.publi h1{
+    line-height: 200px;
+    margin-bottom: -5%;
+}
+.publi img{
+    margin-top: -10px;
+}
+
+.calico h1{
+    margin-bottom: -25.5%;
+}
+.bottle h1{
+    margin-bottom: -25.5%;
+}
