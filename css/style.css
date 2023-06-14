@@ -1,6 +1,8 @@
 @font-face {
     font-family: "Sentient";
-    src: url("Sentient-Variable.ttf");
+    src: url("Sentient-Variable.ttf") format('truetype'),
+         url("Sentient-Variable.woff") format('woff'),
+         url("Sentient-Variable.woff2") format('woff2');
 }
 
 html {
@@ -15,7 +17,6 @@ html {
     }
 
 *{
-    
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     /* font-weight: normal; */
@@ -51,7 +52,6 @@ header{
 section{
     width: 100vw;
     height: 100vh;
-    background-color:#FFEBD1;
     position: absolute;
 }
 
@@ -64,7 +64,8 @@ section{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 400vh;
+    height: 380vh;
+    overflow: hidden;
     background-color: #4DD19F;
     transition: 1s;
 }
@@ -103,15 +104,15 @@ section{
 h3{
     font-family: "Sentient";
     color: white;
-    font-size: 8rem;
+    font-size: clamp(4rem,7.5vw,8rem);
 }
 #infoState{
-    font-size: 1.4rem;
+    font-size: clamp(0.5rem,1.5vw,1.4rem);
     margin-top: -5%;
     margin-left: 3%;
 }
 #text{
-    font-size: 2rem;
+    font-size: clamp(1rem,2.5vw,2rem);
     width: 70%;
     margin-left: 4%;
 }
@@ -154,8 +155,8 @@ h3{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    /* el height lo toco en la funcion irEstado */
-    height: 1300vh;
+    background-color:#FFEBD1;
+    height: auto;
     opacity: 1;
 }
 
@@ -170,7 +171,6 @@ h3{
     margin-bottom: -5%;
     font-family: 'Sentient';
     font-size: 10rem;
-    font-weight: 300;
     margin-left: -16px;
     color: black;
 }
@@ -182,7 +182,7 @@ h3{
     position: absolute;
     width: 33%;
     z-index: -1;
-    padding-left: 35%;
+    margin-left: 35%;
 }
 
 #detalles{
@@ -193,6 +193,7 @@ h3{
     align-items: center;
     margin: 0 auto;
     transition:1s;
+    overflow: hidden;
 }
 .dTitulo{
     width: 48%;
@@ -227,21 +228,22 @@ h3{
 }
 
 .foto{
-    margin-left: 10vw;
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     padding-bottom: 12%;
+    overflow: hidden;
 }
 .foto img{
-    width: 100%;
+    width: 80%;
 }
 .foto h1{
-    margin-top: -895px;
+    margin-top: -810px;
     color: white;
+    position: relative;
+    right: -25%;
 }
 
 
@@ -257,6 +259,8 @@ h3{
     font-size: 1.6rem;
     width: 45%;
     padding: 1% 0;
+    position: relative;
+    z-index: 2;
 }
 .imgs{
     width: 45%;
@@ -267,8 +271,41 @@ h3{
     position: sticky;
     top: 20%;
     text-align: right;
-    padding: 10%;
+    padding: 10% 5%;
+    display: flex;
+    justify-content: end;
 }
+
+#animado h4{
+    font-family: 'Sentient';
+    font-size: 2rem;
+    font-weight: 300;
+}
+.todaLinea{
+    width: 40%;
+    background-color: white;
+    height: 100%;
+    margin-left: 15%;
+}
+.carretera{
+    width: 3%;
+    display: flex;
+}
+.todosTrozos{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.trozoRoad{
+    background-color: white;
+    width: 100%;
+    height: 16%;
+    margin: auto;
+    margin: 27% 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
 
 .publi{
     padding: 200px 0;
@@ -278,7 +315,10 @@ h3{
     margin-bottom: -5%;
 }
 .publi img{
-    margin-top: -10px;
+    position: relative;
+    top: -70px;
+    /* margin-top: -70px; */
+    right: 137px;
 }
 
 .calico h1{
@@ -286,4 +326,100 @@ h3{
 }
 .bottle h1{
     margin-bottom: -25.5%;
+}
+
+
+
+
+/*Estados*/
+
+footer{
+    height: 10vh;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer img{
+    height: 50%;
+    background:radial-gradient(circle, rgba(255,255,255,0.738532913165266) 0%, rgba(0,0,0,0) 50%);
+}
+
+#estates{
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+}
+.illinois #silueta{
+    z-index: 0;
+    width: 26%;
+}
+.illinois .textos{
+    position: absolute;
+    z-index: 1;
+}
+.illinois{
+    background-color: #4DD19F;
+}
+.misu{
+    background-color: #74D09F;
+}
+.kansas{
+    background-color: #7FBD80;
+}
+.okla{
+    background-color: #BFBC69;
+}
+.texas{
+    background-color: #FBD294;
+}
+.newM{
+    background-color: #F9C5A8;
+}
+.newM #silueta{
+    width: 26%;
+}
+.arizona{
+    background-color: #FCDAB1;
+}
+.arizona #silueta{
+    width: 26%;
+}
+
+
+
+
+
+#tuGirao{
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.968);
+    color: white;
+}
+#tuGirao h1{
+    margin-top: 70%;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+    color: white;
+}
+#tuGirao img{
+    width: 9%;
+    margin-top: 76%;
+    margin-left: 45%;
+    position: fixed;
+}
+@media (max-width:1150px) {
+    #tuGirao{
+        display: flex;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+    }
 }
