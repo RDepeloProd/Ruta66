@@ -414,7 +414,7 @@ footer img{
     margin-left: 45%;
     position: fixed;
 }
-@media (max-width:1150px) {
+@media (max-width:750px) {
     #tuGirao{
         display: flex;
         position: absolute;
